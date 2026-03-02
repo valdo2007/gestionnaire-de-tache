@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Création de compte – Gestionnaire de Tâches</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/gif" href="6172541.gif">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="auth-card">
+  <style>
+    body {
+      background:  #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #388E3C;
+      --primary-light: #e8f5e9;
+      --surface: #fff;
+      --text: #333;
+      --text-muted: #777;
+      --radius: 12px;
+      --shadow: 0 4px 16px rgba(0,0,0,0.08);
+      --transition: 0.22s ease;
+    }
+
+    .auth-card {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      width: 100%;
+      max-width: 380px;
+      margin: 20px auto;
+    }
+
+    .form-group { margin-bottom: 16px; }
+    
+    .form-group label { 
+      display: block; 
+      font-weight: 500; 
+      font-size: 0.9rem; 
+      margin-bottom: 6px; 
+      color: var(--text);
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+
+    .form-group input:focus, .form-group select:focus { 
+      border-color: var(--primary); 
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background var(--transition);
+      margin-top: 8px;
+    }
+
+    .btn-submit:hover { 
+      background: var(--primary-dark); 
+    }
+
+    .auth-msg { 
+      text-align: center; 
+      color: #f44336; 
+      font-size: 0.88rem; 
+      margin-top: 10px; 
+      min-height: 20px; 
+    }
+  </style>
+
+  <div id="register-form">
+    <div class="form-group">
+      <label>Prénom & Nom</label>
+      <input type="text" id="reg-name" placeholder="ex: Marie Dupont">
+    </div>
+    <div class="form-group">
+      <label>Nom d'utilisateur</label>
+      <input type="text" id="reg-username" placeholder="ex: marie.dupont">
+    </div>
+    <div class="form-group">
+      <label>Niveau d'études</label>
+      <select id="reg-niveau">
+        <option value="">Choisir...</option>
+        <option>Lycée – Seconde</option>
+        <option>Lycée – Première</option>
+        <option>Lycée – Terminale</option>
+        <option>BTS / IUT</option>
+        <option>Licence 1</option>
+        <option>Licence 2</option>
+        <option>Licence 3</option>
+        <option>Master 1</option>
+        <option>Master 2</option>
+        <option>Doctorat</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Mot de passe</label>
+      <input type="password" id="reg-password" placeholder="••••••••">
+    </div>
+    <button class="btn-submit" onclick="register()">Créer le compte</button>
+    <div class="auth-msg" id="register-msg"></div>
+  </div>
+</div>
+</body>
+</html>
